@@ -7,7 +7,7 @@ terraform {
     }
   }
   backend "s3" {
-    bucket         = "dev-aman-tf-bucket"
+    bucket         = "test1-tfstate-sean"
     region         = "ap-southeast-2"
     key            = "eks/terraform.tfstate"
     dynamodb_table = "Lock-Files"
