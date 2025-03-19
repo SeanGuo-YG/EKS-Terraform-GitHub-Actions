@@ -17,6 +17,9 @@ eip-name              = "elasticip-ngw"
 ngw-name              = "ngw"
 eks-sg                = "eks-sg"
 
+# JumpBox
+jump-key              = "eks-test-co.pem"   
+   
 # EKS
 is-eks-cluster-enabled     = true
 cluster-version            = "1.31"

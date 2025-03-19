@@ -24,6 +24,8 @@ module "eks" {
   eip-name              = "${local.env}-${local.org}-${var.eip-name}"
   ngw-name              = "${local.env}-${local.org}-${var.ngw-name}"
   eks-sg                = var.eks-sg
+  jump-key              = var.jump-key
+
 
   is_eks_role_enabled           = true
   is_eks_nodegroup_role_enabled = true
@@ -39,6 +41,6 @@ module "eks" {
   cluster-version               = var.cluster-version
   endpoint-private-access       = var.endpoint-private-access
   endpoint-public-access        = var.endpoint-public-access
-
+  
   addons = var.addons
 }

@@ -26,6 +26,8 @@ variable "eip-name" {}
 variable "ngw-name" {}
 variable "eks-sg" {}
 
+# JumpBox
+variable "jump-key" {}
 
 # EKS
 variable "is-eks-cluster-enabled" {}
