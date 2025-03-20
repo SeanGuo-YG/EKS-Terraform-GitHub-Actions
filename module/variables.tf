@@ -54,4 +54,4 @@ variable "desired_capacity_spot" {}
 variable "min_capacity_spot" {}
 variable "max_capacity_spot" {}
 # JumpBox
-variable "jump-key" {}
+variable "jump-key-name" {}

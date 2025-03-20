@@ -18,7 +18,7 @@ ngw-name              = "ngw"
 eks-sg                = "eks-sg"
 
 # JumpBox
-jump-key              = "eks-test-co.pem"   
+jump-key-name              = "eks-test-co"   
    
 # EKS
 is-eks-cluster-enabled     = true

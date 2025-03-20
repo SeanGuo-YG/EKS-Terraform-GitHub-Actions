@@ -23,11 +23,6 @@ resource "aws_security_group" "jump_sg" {
   }
 }
 
-resource "aws_key_pair" "ec2_key" {
-  key_name   = "eks-test-co"
-  #public_key = file("${path.root}/${var.jump-key}")
-}
-
 data "aws_ami" "ubuntu" {
   most_recent = true
   filter {
@@ -41,7 +36,7 @@ resource "aws_instance" "ubuntu_server" {
   instance_type          = "t2.micro"
   subnet_id              = aws_subnet.public-subnet[0].id
   vpc_security_group_ids = [aws_security_group.jump_sg.id]
-  key_name               = aws_key_pair.ec2_key.key_name
+  key_name               = var.jump-key-name
 
   tags = {
     Name = "UbuntuServer-JumpBox"

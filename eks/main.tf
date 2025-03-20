@@ -24,7 +24,7 @@ module "eks" {
   eip-name              = "${local.env}-${local.org}-${var.eip-name}"
   ngw-name              = "${local.env}-${local.org}-${var.ngw-name}"
   eks-sg                = var.eks-sg
-  jump-key              = var.jump-key
+  jump-key-name              = var.jump-key-name
 
 
   is_eks_role_enabled           = true
