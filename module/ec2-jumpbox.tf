@@ -23,16 +23,8 @@ resource "aws_security_group" "jump_sg" {
   }
 }
 
-data "aws_ami" "ubuntu" {
-  most_recent = true
-  filter {
-    name   = "name"
-    values = ["ubuntu/images/hvm-ssd/ubuntu-jammy-22.04-amd64-server-*"]
-  }
-}
-
 resource "aws_instance" "ubuntu_server" {    
-  ami                    = data.aws_ami.ubuntu.id
+  ami                    = "ami-09e143e99e8fa74f9" #Ubuntu Server 24.04 LTS (HVM)
   instance_type          = "t2.micro"
   subnet_id              = aws_subnet.public-subnet[0].id
   vpc_security_group_ids = [aws_security_group.jump_sg.id]
