@@ -24,8 +24,8 @@ resource "aws_security_group" "jump_sg" {
 }
 
 resource "aws_key_pair" "ec2_key" {
-  key_name   = "jump-key"
-  public_key = file("${path.root}/${var.jump-key}")
+  key_name   = "eks-test-co"
+  #public_key = file("${path.root}/${var.jump-key}")
 }
 
 data "aws_ami" "ubuntu" {
