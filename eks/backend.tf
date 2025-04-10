@@ -10,7 +10,7 @@ terraform {
     bucket         = "test1-tfstate-sean"
     region         = "ap-southeast-2"
     key            = "eks/terraform.tfstate"
-    dynamodb_table = "Lock-Files"
+    dynamodb_table = "Lock-Files-Sean"
     encrypt        = true
   }
 }
