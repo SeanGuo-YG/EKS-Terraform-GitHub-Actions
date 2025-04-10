@@ -18,7 +18,7 @@ ngw-name              = "ngw"
 eks-sg                = "eks-sg"
 
 # JumpBox
-jump-key-name              = "eks-test-co"   
+jump-key-name              = "tftest-sean-key"   
    
 # EKS
 is-eks-cluster-enabled     = true
